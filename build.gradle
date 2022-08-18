@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+test {
+    useJUnitPlatform()
+}
+task printMessage {
+    println 'Hello Students'
+}
+
+printMessage.doFirst {
+    println 'Hello Teacher'
+}
+
+printMessage.doLast {
+    println 'Lessons are canceled today'
+}
